@@ -1,0 +1,39 @@
+.home__left {
+	grid-column: 1/5;
+}
+
+.home__right {
+	top: 0%;
+	grid-column: 5/9;
+	background-color: rgba(0, 0, 0, .4);   
+	backdrop-filter: blur(10px);
+	color: white;
+	height: 100vh;
+}
+
+.home__right h1 {
+	font-weight: 300;
+}
+
+.home__presets {
+	margin: 0 15px;;
+	padding: 25px 0;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.home__presets > h4 {
+	font-weight: 200;
+	padding: 10px 0;
+	color: rgba(255, 255, 255, 0.6);
+	transition: color 0.5s ease;
+}
+
+.home__presets > h4:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.home__weatherDetails {
+	margin: 0 15px;
+	padding: 25px 0;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}

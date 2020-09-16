@@ -1,0 +1,28 @@
+.searchBar > input {
+	grid-column: 1/7;
+	height: 80px;
+	border: none;
+	background: transparent;
+	color: white;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+	padding-top: 15px;
+	margin: 0 40px 0 15px;
+	font-size: 1.5em;
+	font-family: 'Poppins';
+	font-weight: 200;
+}
+
+.searchBar > input::placeholder { 
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.searchBar > input:focus {
+	outline: none;
+}
+
+.searchBar > button {
+	grid-column: 7/9;
+	top: 0%;
+	background: orange;
+	border: none;
+}
