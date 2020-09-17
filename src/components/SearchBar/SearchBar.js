@@ -12,7 +12,7 @@ function SearchBar() {
 	const weatherApi ='ed8879c76ac5097000f1c6a9159c4e7f';
 
 	function calculateTemperatureFahrenheight(temp) {
-		return ((temp)); 273.15; 9 / 5 + 32;;
+		return temp
 	}
 
 	const setLocation = () => {
@@ -39,7 +39,7 @@ function SearchBar() {
 						sunrise: data.city.sunrise,
 						sunset: data.city.sunset,
 						weatherForecast: data.list,
-						currentWeatherF: calculateTemperatureFahrenheight()
+						currentWeatherF: '35'
 					}
 				})
 			  }
