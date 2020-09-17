@@ -1,9 +1,34 @@
 .weatherCard {
-    grid-column: 2/4;
+    overflow-y: scroll;
 }
 
 .weatherCard > h4 {
     font-weight: 200;
+    font-size: 1.2em;
     padding: 10px 0;
     color: white;
+    grid-column: 1/9;
 }
+
+.weatherCard__details {
+    grid-column: 1/8;
+    display: flex;
+    
+}
+
+.weatherCard__headers > h4 {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+}
+
+.weatherCard__results {
+    padding-left: 150px;
+}
+
+.weatherCard__results > h4 {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+}
+

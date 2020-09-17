@@ -1,14 +1,15 @@
 .home__left {
-	grid-column: 1/5;
+	grid-column: 1/6;
 }
 
 .home__right {
 	top: 0%;
-	grid-column: 5/9;
+	grid-column: 6/9;
 	background-color: rgba(0, 0, 0, .4);   
 	backdrop-filter: blur(10px);
 	color: white;
-	height: 100vh;
+	height: 125vh;
+  	overflow-y: auto;
 }
 
 .home__right h1 {

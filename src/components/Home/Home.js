@@ -5,6 +5,7 @@ import { useStateValue } from '../../StateProvider';
 // Components
 import WeatherCard from '../WeatherCard/WeatherCard';
 import SearchBar from '../SearchBar/SearchBar';
+import HeroDisplay from '../HeroDisplay/HeroDisplay';
 
 function Home() {
 	const [{location, weather}, dispatch] = useStateValue();
@@ -12,10 +13,7 @@ function Home() {
 	return (
 		<div className="home grid">
 			<div className="home__left">
-        		<h1>Welcome</h1>
-        		<p>{location?.city}</p>
-        		<p>{location?.state}</p>
-        		<p>{weather?.weatherType}</p>
+        		<HeroDisplay />
       		</div>
 			<div className="home__right">
         		<SearchBar />

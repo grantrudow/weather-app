@@ -11,6 +11,10 @@ function SearchBar() {
 	const [searchText, setSearchText] = useState();
 	const weatherApi ='ed8879c76ac5097000f1c6a9159c4e7f';
 
+	function calculateTemperatureFahrenheight(temp) {
+		return ((temp)); 273.15; 9 / 5 + 32;;
+	}
+
 	const setLocation = () => {
 		if (searchText != null) {
 			let text = searchText.split(',')
@@ -25,6 +29,7 @@ function SearchBar() {
 				})
 				const data = response.data;
 
+
 				dispatch({
 					type: 'SET_WEATHER_DATA',
 					item: {
@@ -33,7 +38,8 @@ function SearchBar() {
 						timezone: data.city.timezone,
 						sunrise: data.city.sunrise,
 						sunset: data.city.sunset,
-						weatherForecast: data.list
+						weatherForecast: data.list,
+						currentWeatherF: calculateTemperatureFahrenheight()
 					}
 				})
 			  }
