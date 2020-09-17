@@ -4,7 +4,7 @@ import { useStateValue } from '../../StateProvider';
 import { getFahrenheit, getCelsius } from '../../reducer';
 
 function MobileHero() {
-	const [{location, weather}, dispatch] =useStateValue();
+	const [{weather}, dispatch] =useStateValue();
 
 	return (
 		<div className="mobileHero grid">

@@ -12,7 +12,7 @@ export const initialState = {
 		sunrise: 0,
 		sunset: 0,
 		weatherForecast: [],
-		currentTemp: 0
+		currentTemp: 300
 	}
 }
 

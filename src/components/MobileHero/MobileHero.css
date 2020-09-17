@@ -1,5 +1,24 @@
 .mobileHero__content {
 	padding-top: 50px;
-	grid-column: 2/8;
-	justify-self: center;
+	grid-column: 3/7;
+}
+
+.mobileHero__content {
+	
+}
+
+.mobileHero__content > h1 {
+	font-size: 5em;
+	color: white;
+	font-weight: 300;
+}
+
+.mobileHero__locTime > h1 {
+	color: white;
+	font-weight: 300;
+}
+
+.mobileHero__locTime > p {
+	color: rgba(255, 255, 255, 0.8);
+	
 }

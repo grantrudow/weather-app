@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './SearchBar.css'
 import { useStateValue } from '../../StateProvider';
-import axios from '../../axios'
 
 // Icons
 import SearchIcon from '@material-ui/icons/Search';
 
 function SearchBar({getLocationWeather}) {
-	const [{location, weather}, dispatch] = useStateValue();
+	const [{weather}, dispatch] = useStateValue();
 	const [searchText, setSearchText] = useState();
 
 	const setLocation = () => {

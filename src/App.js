@@ -50,7 +50,7 @@ function App() {
         <Home getLocationWeather={getLocationWeather} /> 
       </Responsive>
       <Responsive displayIn={["Mobile", "Tablet"]}>
-        <MobileHome />
+        <MobileHome getLocationWeather={getLocationWeather}/>
       </Responsive>
       <img 
         src={sunnyDay} 
