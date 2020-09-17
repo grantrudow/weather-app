@@ -6,14 +6,9 @@ import axios from '../../axios'
 // Icons
 import SearchIcon from '@material-ui/icons/Search';
 
-function SearchBar() {
+function SearchBar({getLocationWeather}) {
 	const [{location, weather}, dispatch] = useStateValue();
 	const [searchText, setSearchText] = useState();
-	const weatherApi ='ed8879c76ac5097000f1c6a9159c4e7f';
-
-	function calculateTemperatureFahrenheight(temp) {
-		return temp
-	}
 
 	const setLocation = () => {
 		if (searchText != null) {
@@ -22,39 +17,7 @@ function SearchBar() {
 			let state = text[1]
 			let country = text[3]
 
-			const getLocationWeather = async () => {
-				const response = await axios({
-				  method: 'get',
-				  url: `/forecast?q=${city},${state},${country}&appid=${weatherApi}`
-				})
-				const data = response.data;
-
-
-				dispatch({
-					type: 'SET_WEATHER_DATA',
-					item: {
-						city: data.city.name,
-						country: data.city.country,
-						timezone: data.city.timezone,
-						sunrise: data.city.sunrise,
-						sunset: data.city.sunset,
-						weatherForecast: data.list,
-						currentWeatherF: '35'
-					}
-				})
-			  }
-			
-			getLocationWeather();
-
-			dispatch({
-				type: 'SET_LOCATION',
-				item: {
-					status: true,
-					city: city,
-					state: state,
-					country: country
-				}
-			})
+			getLocationWeather(city, state, country);
 		}
 	}
 

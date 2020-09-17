@@ -1,3 +1,5 @@
+/* Mobile Sizing */
+
 .spacer {
     height: 75vh;
 }
@@ -9,8 +11,9 @@
 
 .heroDisplay__content > h1 {
     grid-column: 2/4;
-    font-size: 4.5em;
+    font-size: 7em;
     font-weight: 300;
+    justify-self: flex-end;
 }
 
 .heroDisplay__locTime {
@@ -20,6 +23,47 @@
 }
 
 .heroDisplay__locTime > h1 {
-    font-weight: 200;
-    font-size: 3em;
+    font-weight: 300;
+    font-size: 5em;
+}
+
+.heroDisplay__locTime > p {
+    padding: 0;
+    font-size: 1.3em;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+/* Tablet */
+
+@media screen and (min-width: 1000) {
+    .spacer {
+        height: 75vh;
+    }
+    
+    .heroDisplay__content {
+        align-self: baseline
+    }
+    
+    .heroDisplay__content > h1 {
+        grid-column: 2/4;
+        font-size: 7em;
+        font-weight: 300;
+        justify-self: flex-end;
+    }
+    
+    .heroDisplay__locTime {
+        grid-column: 4/8;
+        padding-left: 10px;
+        align-self: center;
+    }
+    
+    .heroDisplay__locTime > h1 {
+        font-weight: 300;
+        font-size: 5em;
+    }
+    
+    .heroDisplay__locTime > p {
+        padding: 0;
+        font-size: 1.3em;
+    }
 }

@@ -1,0 +1,5 @@
+.mobileHero__content {
+	padding-top: 50px;
+	grid-column: 2/8;
+	justify-self: center;
+}

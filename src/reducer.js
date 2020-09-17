@@ -11,8 +11,19 @@ export const initialState = {
 		timezone: 0,
 		sunrise: 0,
 		sunset: 0,
-		weatherForecast: []
+		weatherForecast: [],
+		currentTemp: 0
 	}
+}
+
+export const getFahrenheit = (temp) => {
+	let tempF = ((temp-273.15)*(9/5)+32)
+	return Math.round(tempF)
+}
+
+export const getCelsius = (temp) => {
+	let tempC = ((temp-273.15))
+	return Math.round(tempC)
 }
 
 const reducer = (state, action) => {

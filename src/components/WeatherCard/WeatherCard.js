@@ -11,14 +11,14 @@ function WeatherCard() {
 
       <div className="weatherCard__details">
         <div className="weatherCard__headers">
-          <h4>Cloudy</h4>
+          <h4>Cloud Coverage</h4>
           <h4>Humidity</h4>
           <h4>Wind</h4>
         </div>
         <div className="weatherCard__results">
-          <h4>84%</h4>
-          <h4>25%</h4>
-          <h4>25mph</h4>
+          <h4>{weather.cloudCoverage} %</h4>
+          <h4>{weather.humidity} %</h4>
+          <h4>{weather.windSpeed} mph</h4>
         </div>
       </div>
     </div>

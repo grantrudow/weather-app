@@ -8,8 +8,10 @@
 	background-color: rgba(0, 0, 0, .4);   
 	backdrop-filter: blur(10px);
 	color: white;
-	height: 125vh;
-  	overflow-y: auto;
+	overflow-y: auto;
+	height: 100vh;
+    top: 0;
+    bottom: 0;
 }
 
 .home__right h1 {
@@ -37,4 +39,43 @@
 	margin: 0 15px;
 	padding: 25px 0;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Tablet */
+
+@media screen and (min-width: 1000) {
+	.home__left {
+		grid-column: 1/6;
+	}
+	
+	.home__right {
+		top: 0%;
+		grid-column: 6/9;
+		overflow-y: auto;
+		height: 100vh;
+		top: 0;
+		bottom: 0;
+	}
+	
+	.home__right h1 {
+		font-weight: 300;
+	}
+	
+	.home__presets {
+		margin: 0 15px;;
+		padding: 25px 0;
+
+	}
+	
+	.home__presets > h4 {
+		font-weight: 200;
+		padding: 10px 0;
+	}
+	
+	
+	.home__weatherDetails {
+		margin: 0 15px;
+		padding: 25px 0;
+
+	}
 }
