@@ -1,0 +1,36 @@
+.mobileSearch {
+	margin-top: 25px;
+}
+
+.mobileSearch > input {
+	grid-column: 1/8;
+	height: 40px;
+	border: none;
+	background: transparent;
+	color: white;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+	font-size: 1em;
+	font-family: 'Poppins';
+	font-weight: 200;
+	padding-left: 15px;
+	width: 100%;
+}
+
+.mobileSearch > input::placeholder { 
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.mobileSearch > input:focus {
+	outline: none;
+}
+
+.mobileSearch > button {
+	grid-column: 8/9;
+	background: orange;
+    border: none;
+    margin-top: -10px;
+}
+
+.mobileSearch > button:focus {
+	outline: none;
+}

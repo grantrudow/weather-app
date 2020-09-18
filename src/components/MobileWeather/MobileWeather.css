@@ -1,0 +1,33 @@
+.mobileWeather {
+    margin-top: 25px;
+}
+
+.mobileWeather > h4 {
+    grid-column: 1/9;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: white;
+    padding-bottom: 25px;
+}
+
+.mobileWeather__details {
+    grid-column: 2/8;
+    display: flex;
+}
+
+.mobileWeather__headers > h4 {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+}
+
+.mobileWeather__results {
+    padding-left: 150px;
+}
+
+.mobileWeather__results > h4 {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+}

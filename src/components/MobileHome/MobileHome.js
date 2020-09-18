@@ -3,6 +3,8 @@ import './MobileHome.css';
 
 // Components
 import MobileHero from '../MobileHero/MobileHero';
+import MobileWeather from '../MobileWeather/MobileWeather';
+import MobileSearch from '../MobileSearch/MobileSearch';
 
 function MobileHome({getLocationWeather}) {
 
@@ -18,6 +20,8 @@ function MobileHome({getLocationWeather}) {
 	return (
 		<div className="mobileHome">
 			<MobileHero />
+			<MobileSearch getLocationWeather={getLocationWeather}/>
+			<MobileWeather />
 		</div>
 	)
 }

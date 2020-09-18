@@ -22,7 +22,10 @@
 
 .searchBar > button {
 	grid-column: 7/9;
-	top: 0%;
 	background: orange;
-	border: none;
+    border: none;
+}
+
+.searchBar > button:focus {
+	outline: none;
 }
