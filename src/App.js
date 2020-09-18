@@ -17,7 +17,7 @@ import sunset from './resources/images/sunset.jpg';
 
 function App() {
   const [{location, weather}, dispatch] = useStateValue();
-  const weatherApi ='ed8879c76ac5097000f1c6a9159c4e7f';
+  const weatherApi = process.env.WEATHER_API;
 
   const getLocationWeather = async (city, state, country) => {
     const response = await axios({
