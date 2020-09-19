@@ -5,14 +5,19 @@ export const initialState = {
 		state: '',
 		country: ''
 	},
-	weather: {
+	currentWeather: {
 		city: '',
 		country: '',
-		timezone: 0,
 		sunrise: 0,
 		sunset: 0,
-		weatherForecast: [],
-		currentTemp: 300
+		currentDescription: '',
+		currentTemp: 300,
+		currentFeel: 300,
+		currentHumidity: 0,
+		currentWindSpeed: 0,
+		todayHigh: 300,
+		todayLow: 300,
+		currentDate: Date()
 	}
 }
 
@@ -35,10 +40,10 @@ const reducer = (state, action) => {
 				...state,
 				location: action.item
 			}
-		case 'SET_WEATHER_DATA':
+		case 'SET_CURRENT_WEATHER_DATA':
 			return {
 				...state,
-				weather: action.item
+				currentWeather: action.item
 			}
 		default:
 			return state

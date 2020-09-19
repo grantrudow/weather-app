@@ -3,7 +3,7 @@ import './MobileWeather.css';
 import {useStateValue} from '../../StateProvider';
 
 function MobileWeather() {
-    const [{weather}, dispatch] = useStateValue();
+    const [{currentWeather}, dispatch] = useStateValue();
 
     return (
         <div className="mobileWeather grid">
@@ -16,9 +16,9 @@ function MobileWeather() {
                     <h4>Wind</h4>
                 </div>
                 <div className="mobileWeather__results">
-                    <h4>{weather.cloudCoverage} %</h4>
-                    <h4>{weather.humidity} %</h4>
-                    <h4>{weather.windSpeed} mph</h4>
+                    <h4> %</h4>
+                    <h4> %</h4>
+                    <h4> mph</h4>
                 </div>
             </div>
         </div>

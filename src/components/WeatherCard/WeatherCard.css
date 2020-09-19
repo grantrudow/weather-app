@@ -1,15 +1,17 @@
-
 .weatherCard > h4 {
     font-weight: 200;
     font-size: 1.2em;
     padding: 10px 0;
     color: white;
     grid-column: 1/9;
+    text-align: center;
 }
 
 .weatherCard__details {
-    grid-column: 1/8;
+    grid-column: 1/9;
     display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .weatherCard__headers > h4 {
@@ -19,7 +21,7 @@
 }
 
 .weatherCard__results {
-    padding-left: 150px;
+    padding-left: 100px;
 }
 
 .weatherCard__results > h4 {
@@ -28,3 +30,32 @@
     padding: 10px 0;
 }
 
+@media screen and (min-width: 1000px) {
+    .weatherCard > h4 {
+        font-weight: 200;
+        font-size: 1.2em;
+        padding: 10px 0;
+        grid-column: 1/9;
+        text-align: left;
+    }
+    
+    .weatherCard__details {
+        grid-column: 1/8;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .weatherCard__headers > h4 {
+        font-weight: 200;
+        padding: 10px 0;
+    }
+    
+    .weatherCard__results {
+        padding-left: 100px;
+    }
+    
+    .weatherCard__results > h4 {
+        font-weight: 200;
+        padding: 10px 0;
+    }
+}

@@ -22,36 +22,71 @@ function App() {
   const getLocationWeather = async (city, state, country) => {
     const response = await axios({
       method: 'get',
-      url: `/forecast?q=${city},${state},${country}&appid=${weatherApi}`
+      url: `/weather?q=${city},${state},${country}&appid=${weatherApi}`
     })
     const data = response.data;
-  
-  
+    
+    const months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ]
+
+    const days = [
+      'Mon',
+      'Tue',
+      'Wed',
+      'Thurs',
+      'Fri',
+      'Sat',
+      'Sun'
+    ]
+
+    let today = new Date()
+    let year = today.getFullYear();
+    let monthName = months[today.getMonth()];
+    let day = today.getDate();
+    let dayOfWeek = days[today.getDay()];
+
+    let formattedDay = `${dayOfWeek} - ${day} ${monthName}, ${year}`
+
     dispatch({
-      type: 'SET_WEATHER_DATA',
+      type: 'SET_CURRENT_WEATHER_DATA',
       item: {
-        city: data.city.name,
-        country: data.city.country,
-        timezone: data.city.timezone,
-        sunrise: data.city.sunrise,
-        sunset: data.city.sunset,
-        weatherForecast: data.list,
-        currentTemp: data.list[0].main.temp,
-        humidity: data.list[0].main.humidity,
-        cloudCoverage: data.list[0].clouds.all,
-        windSpeed: data.list[0].wind.speed
+        city: data.name,
+        country: data.sys.country,
+        sunrise: data.sys.sunrise,
+        sunset: data.sys.sunset,
+        currentDescription: data.weather[0].main,
+        currentTemp: data.main.temp,
+        currentFeel: data.main.feels_like,
+        currentHumidity: data.main.humidity,
+        todayHigh: data.main.temp_max,
+        todayLow: data.main.temp_min,
+        currentWindSpeed: data.wind.speed,
+        currentDate: formattedDay
       }
     })
     }
     
   return (
     <div className="App">
-      <Responsive displayIn={["Laptop"]}>
+      <Home getLocationWeather={getLocationWeather} />
+      {/* <Responsive displayIn={["Laptop"]}>
         <Home getLocationWeather={getLocationWeather} /> 
       </Responsive>
       <Responsive displayIn={["Mobile", "Tablet"]}>
         <MobileHome getLocationWeather={getLocationWeather}/>
-      </Responsive>
+      </Responsive> */}
       <img 
         src={sunnyDay} 
         alt="Type of Weather"

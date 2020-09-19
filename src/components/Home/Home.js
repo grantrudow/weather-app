@@ -7,6 +7,7 @@ import { useStateValue } from '../../StateProvider';
 import WeatherCard from '../WeatherCard/WeatherCard';
 import SearchBar from '../SearchBar/SearchBar';
 import HeroDisplay from '../HeroDisplay/HeroDisplay';
+import MobileHero from '../MobileHero/MobileHero';
 
 function Home({getLocationWeather}) {
 	const [{weather}, dispatch] = useStateValue();	
@@ -32,6 +33,9 @@ function Home({getLocationWeather}) {
 					<h4 onClick={() => getLocationWeather('New York', 'NY', 'US')}>New York</h4>
 					<h4 onClick={() => getLocationWeather('London', 'Uk')}>London</h4>
 					<h4 onClick={() => getLocationWeather('Atlanta', 'GA', 'US')}>Atlanta</h4>
+				</div>
+				<div className = "home__mobileHero">
+					<MobileHero />
 				</div>
 				<div className="home__weatherDetails">
 					<WeatherCard />				
