@@ -16,8 +16,17 @@ import sunnyDay from './resources/images/sunnyDay.jpg'
 import sunset from './resources/images/sunset.jpg';
 
 function App() {
-  const [{location, weather}, dispatch] = useStateValue();
+  const [{currentWeather}, dispatch] = useStateValue();
   const weatherApi ='ed8879c76ac5097000f1c6a9159c4e7f';
+  let backgroundImage = sunnyDay;
+
+  if (currentWeather.currentDescription === 'Clear') {
+    backgroundImage = sunnyDay
+  } else if (currentWeather.currentDescription === 'Clouds') {
+    backgroundImage = cloudyDay
+  } else if (currentWeather.currentDescription === 'Rain') {
+    backgroundImage = rainyDay
+  }
 
   const getLocationWeather = async (city, state, country) => {
     const response = await axios({
@@ -88,7 +97,7 @@ function App() {
         <MobileHome getLocationWeather={getLocationWeather}/>
       </Responsive> */}
       <img 
-        src={sunnyDay} 
+        src = {backgroundImage}
         alt="Type of Weather"
         className="background-image" 
         />
