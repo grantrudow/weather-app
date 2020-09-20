@@ -9,7 +9,8 @@ function SearchBar({getLocationWeather}) {
 	const [{weather}, dispatch] = useStateValue();
 	const [searchText, setSearchText] = useState();
 
-	const setLocation = () => {
+	const setLocation = (e) => {
+		e.preventDefault();
 		if (searchText != null) {
 			let text = searchText.split(',')
 			let city = text[0]
@@ -22,15 +23,18 @@ function SearchBar({getLocationWeather}) {
 
 
 	return (
-		<div className="searchBar grid">
-			<input 
-			type="text" 
-			placeholder="Ex: Oxford, MS, US" 
-			onChange={event => setSearchText(event.target.value)}
-			/>
-			<button type="submit" onClick={setLocation}>
-				<SearchIcon style={{ fontSize: 40 }}/>
-			</button>
+		<div className="searchBar">
+			<form onSubmit={setLocation} className="searchForm  grid">
+				<input 
+				type="text" 
+				placeholder="Ex: Oxford, MS, US" 
+				onChange={event => setSearchText(event.target.value)}
+				/>
+				
+				<button type="submit">
+					<SearchIcon style={{ fontSize: 40 }}/>
+				</button>
+			</form>
 		</div>
 	)
 }
