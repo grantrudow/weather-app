@@ -1,4 +1,4 @@
-.searchBar > input {
+.searchBar > form > input {
 	grid-column: 1/7;
 	height: 80px;
 	border: none;
@@ -12,20 +12,20 @@
 	font-weight: 200;
 }
 
-.searchBar > input::placeholder { 
+.searchBar > form > input::placeholder { 
 	color: rgba(255, 255, 255, 0.5);
 }
 
-.searchBar > input:focus {
+.searchBar > form > input:focus {
 	outline: none;
 }
 
-.searchBar > button {
+.searchBar > form > button {
 	grid-column: 7/9;
 	background: orange;
     border: none;
 }
 
-.searchBar > button:focus {
+.searchBar > form > button:focus {
 	outline: none;
 }
